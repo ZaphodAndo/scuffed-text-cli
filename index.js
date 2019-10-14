@@ -1,28 +1,17 @@
-var readlineSync = require('readline-sync');
+const readlineSync = require('readline-sync');
+const converter = require('scuffed-text');
 
-let converter = (input) => {
-  let uppercase = true;
-  let convertedString = "";
+let running = true;
+while (running === true) {
+  let userInput = readlineSync.question('Enter text to convert: ');
+  const output = converter(userInput);
+  console.log(output);
 
-  for (let i = 0; i < input.length; i++) {
-    let character = input.charAt(i);
-
-    if (uppercase === true) {
-      character = character.toUpperCase();
-      convertedString = convertedString + character;
-      uppercase = false;
-    } else {
-      character = character.toLowerCase();
-      convertedString = convertedString + character;
-      uppercase = true;
-    }
-
-    if (convertedString.length === input.length) {
-      return convertedString;
-    }
+  userInput = readlineSync.question('Do you want to convert something else? (y/n): ');
+  if (userInput === "y") {
+    running = true;
+  } else {
+    console.log("Rip (┬┬﹏┬┬)");
+    running = false;
   }
-};
-
-const userInput = readlineSync.question('Input: ');
-const output = converter(userInput);
-console.log(output);
+}
