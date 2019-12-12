@@ -1,5 +1,5 @@
-const readlineSync = require('readline-sync');
-const converter = require('scuffed-text');
+import readlineSync from 'readline-sync';
+import converter from 'scuffed-text';
 
 let running = true;
 while (running === true) {
