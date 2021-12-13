@@ -62,3 +62,7 @@ typings/
 
 # Linter files
 .eslintrc.json
+
+# Output
+scuffed-text-cli
+scuffed-text-cli.exe
