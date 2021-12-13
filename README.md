@@ -32,10 +32,16 @@ scuffed-text-cli takes in the text as an argument surrounded by double quotes an
 
 To run scuffed-text-cli open your terminal in the folder you saved the executable and run:
 
-- For Linux + Mac
+- For Linux
 
 ```bash
-./scuffed-text-cli "Hello World"
+./scuffed-text-cli-linux "Hello World"
+```
+
+- For Mac
+
+```bash
+./scuffed-text-cli-mac "Hello World"
 ```
 
 - Windows
